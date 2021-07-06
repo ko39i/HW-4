@@ -67,7 +67,7 @@ for animal in (bear, wolf):
 
 
 class City:
-    def __int__(self, name, population):
+    def __init__(self, name, population):
         self.name = name
         self.population = population
 
@@ -101,11 +101,14 @@ class Add:
         self.a = a
 
     def __add__(self, other):
-        self.other = other
-        if self.a > 10:
-            return self.other * self.a
-        else:
-            return self.other + self.a
+       if self.a > 10:
+            return self.a * self.a
+       else:
+            return self.a + self.a
+
+a1 = Add(11)
+a2 = Add(7)
+print(a1 + a2)
 
 
 11
@@ -120,14 +123,18 @@ class Sum:
 12
 
 class MyOrder:
-    def __int__(self, cart, customer):
+    def __init__(self, cart, customer):
         self.cart = cart
         self.customer = customer
 
     def __bool__(self):
         return len(self.cart) > 0
 
+order_1 = My0rder(['a', 'b', 'c'], 'd')
+order_2 = My0rder([], 'a')
 
+print(bool(order_1))
+print(bool(order_2))
 
 
 
