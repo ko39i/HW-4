@@ -102,9 +102,9 @@ class Add:
 
     def __add__(self, other):
        if self.a > 10:
-            return self.a * self.a
+            return self.a * other.a
        else:
-            return self.a + self.a
+            return self.a + other.a
 
 a1 = Add(11)
 a2 = Add(7)
